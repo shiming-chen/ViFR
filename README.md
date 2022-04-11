@@ -1,7 +1,7 @@
-# ViFR [[arXiv]]()
+# ViFR
 
 
-This repository contains the training codes for the paper  "***ViFR: Visual Feature Reﬁnement for Zero-Shot Learning***" submitted to T-PAMI. 
+This repository contains the training codes for the paper  "***ViFR: Visual Feature Reﬁnement for Zero-Shot Learning***" submitted to T-PAMI. A preliminary conference version of this work appears in the Proceedings of the 2021 IEEE/CVF International Conference on Computer Vison (ICCV) (termed [FREE](https://openaccess.thecvf.com/content/ICCV2021/papers/Chen_FREE_Feature_Refinement_for_Generalized_Zero-Shot_Learning_ICCV_2021_paper.pdf)).
 
 ![](figs/ViFR.png)
 
@@ -53,6 +53,7 @@ $ python train_awa2.py  # AWA2
 
 We also provide trained models ([Google Drive]()) on three datasets. You can download these saved models and validate the results of our paper. Please refer the [test branch]() for testing codes and detail usage.
 Results of our released models using various evaluation protocols on three datasets, both in the CZSL and GZSL settings.
+
 **The input size of ResNet-101 is 224x224:**
 | Dataset | Acc(CZSL) | U(GZSL) | S(GZSL) | H(GZSL) |
 | :-----: | :-----: | :-----: | :-----: | :-----: |
