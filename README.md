@@ -7,13 +7,11 @@ This repository contains the training codes for the paper  "***ViFR: Visual Feat
 
 
 ## Running Environment
-The implementation of **ViFR** mainly based on [PyTorch](https://pytorch.org/). All of our experiments run and test in Python 3.8.8. Moreover, we use [Weights & Biases](https://wandb.ai/site) (W&B) to keep track and organize the results of experiments. Before running our codes, you should follow the [online documentation](https://docs.wandb.ai/quickstart) of W&B to quickstart. You can sign up an online account to track experiments or create a [local server](https://hub.docker.com/r/wandb/local) using docker (recommend).
-
-To install all required dependencies:
+The implementation of **ViFR** is mainly based on Python 3.8.8 and [PyTorch](https://pytorch.org/) 1.8.0. To install all required dependencies:
 ```
 $ pip install -r requirements.txt
 ```
-
+Additionally, we use [Weights & Biases](https://wandb.ai/site) (W&B) to keep track and organize the results of experiments. You may need to follow the [online documentation](https://docs.wandb.ai/quickstart) of W&B to quickstart. To run these codes, [sign up](https://app.wandb.ai/login?signup=true) an online account to track experiments or create a [local wandb server](https://hub.docker.com/r/wandb/local) using docker (recommended).
 
 ## Download Dataset 
 
@@ -31,28 +29,27 @@ We trained the model on three popular ZSL benchmarks: [CUB](http://www.vision.ca
 
 ## Visual Features Preprocessing
 
-In this step, you should run following commond to extract visual features of three datasets, for example:
+In this step, you should run the following commands to extract the visual features of three datasets:
 
 ```
 $ python preprocessing.py --dataset CUB --compression --device cuda:0
+$ python preprocessing.py --dataset SUN --compression --device cuda:0
+$ python preprocessing.py --dataset AWA2 --compression --device cuda:0
 ```
-If your storage is absolutely enough, you could remove the option of `--compression`. This will occupy 56GB space for AWA2, 22GB for SUN and 18GB for CUB, but can significantly reduce the data loading time when training models.
-In addition, extracting and loading visual features will use large memory (e.g., nearly 128GB for AWA2. You may need to add the space of your swap files/partitions (or virtual memory) if memory is not enough. Modifying the codes to implement visual feature extraction in the training loop is an alternative way. 
 
 ## Training ViFR from Scratch
-We provide our parameters setting of conventional ZSL (CZSL) and generalized ZSL (GZSL) tasks in three datasets. You can run following commands to train the **ViFR** from scratch:
+In `./wandb_config`, we provide our parameters setting of conventional ZSL (CZSL) and generalized ZSL (GZSL) tasks for CUB, SUN, and AWA2. You can run the following commands to train the **ViFR** from scratch:
 
 ```
 $ python train_cub.py   # CUB
 $ python train_sun.py   # SUN
 $ python train_awa2.py  # AWA2
 ```
-**Note**: For SUN and AWA2, the parameters setting is different for CZSL and GZSL. Please load the corresponding setting when aiming at CZSL task.
+**Note**: Please load the corresponding setting when aiming at the CZSL task.
 
 ## Results
-
-We also provide trained models ([Google Drive]()) on three datasets. You can download these saved models and validate the results of our paper. Please refer the [test branch]() for testing codes and detail usage.
-Results of our released models using various evaluation protocols on three datasets, both in the CZSL and GZSL settings.
+We also provide trained models ([Google Drive]()) on three datasets. You can download these `.pth` files and validate the results in our paper. Please refer to the [test branch]() for testing codes and usage.
+Following table shows the results of our released models using various evaluation protocols on three datasets, both in the CZSL and GZSL settings:
 
 **The input size of ResNet-101 is 224x224:**
 | Dataset | Acc(CZSL) | U(GZSL) | S(GZSL) | H(GZSL) |
