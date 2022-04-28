@@ -41,9 +41,9 @@ $ python preprocessing.py --dataset AWA2 --compression --device cuda:0
 In `./wandb_config`, we provide our parameters setting of conventional ZSL (CZSL) and generalized ZSL (GZSL) tasks for CUB, SUN, and AWA2. You can run the following commands to train the **ViFR** from scratch:
 
 ```
-$ python train_cub.py   # CUB
-$ python train_sun.py   # SUN
-$ python train_awa2.py  # AWA2
+$ python train_ViFR_CUB.py   # CUB
+$ python train_ViFR_SUN.py   # SUN
+$ python train_ViFR_AWA2.py  # AWA2
 ```
 **Note**: Please load the corresponding setting when aiming at the CZSL task.
 
