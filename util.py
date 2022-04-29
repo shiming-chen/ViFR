@@ -157,7 +157,7 @@ class DATA_LOADER_refine(object):
         batch_att = self.attribute[batch_label]
         return batch_feature, batch_label, batch_att
     
-    def pre_refine_features(self, model, dataloader, device, extract_batch_size=1000):
+    def pre_refine_features(self, model, dataloader, device, extract_batch_size=50):
 
         train_seen_set = torch.utils.data.TensorDataset(
             dataloader.data['train_seen']['resnet_features'])

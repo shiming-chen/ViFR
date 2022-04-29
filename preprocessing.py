@@ -116,7 +116,7 @@ if __name__=='__main__':
     parser.add_argument('--dataset', '-d', type=str, default='AWA2')
     parser.add_argument('--compression', '-c', action='store_true', default=False)
     parser.add_argument('--batch_size', '-b', type=int, default=200)
-    parser.add_argument('--device', '-g', type=str, default='cuda:0')
+    parser.add_argument('--device', '-g', type=str, default='cuda')
     parser.add_argument('--nun_workers', '-n', type=int, default='16')
     config = parser.parse_args()
     extract_features(config)
