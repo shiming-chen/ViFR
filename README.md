@@ -32,9 +32,9 @@ We trained the model on three popular ZSL benchmarks: [CUB](http://www.vision.ca
 In this step, you should run the following commands to extract the visual features of three datasets:
 
 ```
-$ python preprocessing.py --dataset CUB --compression --device cuda:0
-$ python preprocessing.py --dataset SUN --compression --device cuda:0
-$ python preprocessing.py --dataset AWA2 --compression --device cuda:0
+$ python preprocessing.py --dataset CUB --compression
+$ python preprocessing.py --dataset SUN --compression
+$ python preprocessing.py --dataset AWA2 --compression
 ```
 
 ## Training ViFR from Scratch
@@ -42,8 +42,6 @@ In `./wandb_config`, we provide our parameters setting of conventional ZSL (CZSL
 
 ```
 $ python train_ViFR_CUB.py   # CUB
-$ python train_ViFR_SUN.py   # SUN
-$ python train_ViFR_AWA2.py  # AWA2
 ```
 **Note**: Please load the corresponding setting when aiming at the CZSL task.
 
@@ -66,18 +64,7 @@ Following table shows the results of our released models using various evaluatio
 | AWA2 | 77.8 | 68.2 | 78.9 | 73.2 |
 
 **Note**:  The training of our models and all of above results are run on a server with an AMD Ryzen 7 5800X CPU, 128GB memory and a NVIDIA RTX A6000 GPU (48GB).
-<!-- 
-## Citation
-If this work is helpful for you, please cite our paper.
 
-```
-@InProceedings{Chen2021TransZero,
-    author    = {Chen, Shiming and Hong, Ziming and Liu, Yang and Xie, Guo-Sen and Sun, Baigui and Li, Hao and Peng, Qinmu and Lu, Ke and You, Xinge},
-    title     = {TransZero: Attribute-guided Transformer for Zero-Shot Learning},
-    booktitle = {Proceedings of the Thirty-Sixth AAAI Conference on Artificial Intelligence (AAAI)},
-    year      = {2022}
-}
-``` -->
 
 ## References
 Parts of our codes based on:
