@@ -41,12 +41,13 @@ $ python preprocessing.py --dataset AWA2 --compression
 In `./wandb_config`, we provide our parameters setting of conventional ZSL (CZSL) and generalized ZSL (GZSL) tasks for CUB, SUN, and AWA2. You can run the following commands to train the **ViFR** from scratch:
 
 ```
-$ python train_ViFR_CUB.py   # CUB
+$ python train_ViFR_CUB.py
+$ python train_ViFR_SUN.py 
 ```
 **Note**: Please load the corresponding setting when aiming at the CZSL task.
 
 ## Results
-We also provide trained models ([Google Drive]()) on three datasets. You can download these `.pth` files and validate the results in our paper. Please refer to the [test branch]() for testing codes and usage.
+We also provide trained models ([~~Google Drive~~ the download link will be released as soon as possible]()) on three datasets. You can download these `.pth` files and validate the results in our paper. Please refer to the [test branch]() for testing codes and usage.
 Following table shows the results of our released models using various evaluation protocols on three datasets, both in the CZSL and GZSL settings:
 
 **The input size of ResNet-101 is 224x224:**
