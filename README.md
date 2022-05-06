@@ -1,7 +1,7 @@
 # ViFR
 
 
-This repository contains the training codes for the paper  "***ViFR: Visual Feature Reﬁnement for Zero-Shot Learning***". A preliminary conference version of this work appears in the Proceedings of the 2021 IEEE/CVF International Conference on Computer Vison (ICCV) (termed [FREE](https://openaccess.thecvf.com/content/ICCV2021/papers/Chen_FREE_Feature_Refinement_for_Generalized_Zero-Shot_Learning_ICCV_2021_paper.pdf)).
+This repository contains the training codes for the paper  "***ViFR: Visual Feature Reﬁnement for Zero-Shot Learning***". A preliminary conference version of this work appears in the Proceedings of the ICCV'21, titled ["FREE: Feature Refinement for Generalized Zero-Shot Learning"](https://openaccess.thecvf.com/content/ICCV2021/papers/Chen_FREE_Feature_Refinement_for_Generalized_Zero-Shot_Learning_ICCV_2021_paper.pdf).
 
 <!-- ![](figs/ViFR.png) -->
 
