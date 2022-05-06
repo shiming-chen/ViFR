@@ -43,6 +43,7 @@ In `./wandb_config`, we provide our parameters setting of conventional ZSL (CZSL
 ```
 $ python train_ViFR_CUB.py
 $ python train_ViFR_SUN.py 
+$ python train_ViFR_AWA2.py 
 ```
 **Note**: Please load the corresponding setting when aiming at the CZSL task.
 
